@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-slate-200">
+    <header class="bg-white">
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        aria-label="Global"
+      >
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img class="h-8 w-auto" src="./sdu_logo.png" alt="" />
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+            >Project</a
+          >
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+            >Mapping</a
+          >
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+            >Test</a
+          >
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+            >About</a
+          >
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+            >Github <span aria-hidden="true"></span
+          ></a>
+        </div>
+      </nav>
+    </header>
+    <main class="bg-white">
+      <div class="mx-auto max-w-7xl p-6 lg:px-8 py-20 border-black">
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <div class="flex flex-col justify-center">
+            <h1 class="text-4xl font-extrabold leading-10 text-gray-900">
+              Collaborative and Weareable Technologies
+            </h1>
+            <p class="mt-2 text-lg leading-7 text-gray-500">
+              The Collaborative and Wearable Technologies project at ITPD, SDU
+              Denmark, aims to innovate the intersection of human-computer
+              interaction and personal technology through interdisciplinary
+              research and design.
+            </p>
+            <div class="mt-6">
+              <a
+                href="#"
+                class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-clifford hover:bg-opacity-90"
+                >Get started</a
+              >
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <img
+              class="h-64 w-auto"
+              src="https://tailwindui.com/img/illustrations/hero.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto max-w-7xl p-6 lg:px-8 py-8">
+        <div class="flex flex-col justify-center">
+          <!-- <div class="grid grid-cols-1 gap-6 lg:grid-cols-2"> -->
+          <div class="flex flex-col justify-center">
+            <h1 class="text-4xl font-extrabold leading-10 text-gray-900">
+              Collaborative drawing with Microbits
+            </h1>
+            <p class="mt-2 text-lg leading-7 text-gray-500">
+                The "Collaborative Drawing with Microbits" project at ITPD, SDU Denmark, harnesses the power of multiple Microbit devices to create a unique, interactive drawing experience. Each Microbit, detecting pitch and roll, wirelessly transmits data to a receiver connected to a Node.js server, allowing users to collaboratively draw on a digital canvas in real time.
+            </p>
+            <h6 class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0">Prototype</h6>
+            <img class="w-full pb-8" src="/first_snapshot.jpg" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-white">
+        <div class="mx-auto max-w-7xl p-6 lg:px-8">
+          <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+            <div class="flex flex-col justify-center align-center">
+              <h2 class="text-2xl font-bold leading-8 text-gray-900">About Us</h2>
+              <p class="mt-2 text-lg leading-7 text-gray-500">
+                We are a group of students from SDU - Msc. in Information
+                Technology - Product Design.
+              </p>
+            </div>
+            <div class="flex flex-col justify-center">
+              <h2 class="text-2xl font-bold leading-8 text-gray-900">
+                Contact Us
+              </h2>
+              <p class="mt-2 text-lg leading-7 text-gray-500">
+                Universitetsparken 1, 6000 Kolding - Syddansk Universitet Kolding, adresse
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+  </body>
+
+</html>
