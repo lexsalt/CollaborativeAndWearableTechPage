@@ -17,7 +17,7 @@
     </script>
   </head>
   <body class="bg-slate-200">
-    <header class="bg-white">
+    <header class="bg-white mb-22">
       <nav
         class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
@@ -43,7 +43,7 @@
           >
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+          <a href="https://github.com/lexsalt/Microbit-drawing-collab" class="text-sm font-semibold leading-6 text-gray-900"
             >Github <span aria-hidden="true"></span
           ></a>
         </div>
@@ -51,7 +51,6 @@
     </header>
     <main class="bg-white divide-y">
       <div class="mx-auto max-w-7xl p-6 mb-22 lg:px-8">
-        <!-- <div class="grid grid-cols-1 gap-6 lg:grid-cols-2"> -->
           <div class="flex flex-col justify-center">
             <h1 class="text-4xl font-extrabold leading-10 text-gray-900">
               Collaborative and Weareable Technologies
@@ -62,27 +61,12 @@
               interaction and personal technology through interdisciplinary
               research and design.
             </p>
-            <img class="w-full pb-2" src="./campusliv_Kolding_770X330.jpg" />
-            <!-- <div class="mt-6">
-              <a
-                href="#"
-                class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-clifford hover:bg-opacity-90"
-                >Get started</a
-              >
-            </div> -->
+            <h6 class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0">Prototype 1</h6>
+            <img class="w-full pb-2" src="./RobbnMarcus.png" />
           </div>
-          <div class="flex justify-center">
-            <img
-              class="w-auto"
-              src="https://tailwindui.com/img/illustrations/hero.svg"
-              alt=""
-            />
-          </div>
+        </div>  
         <!-- </div> -->
-      </div>
       <div class="mx-auto max-w-7xl p-6 mb-22 lg:px-8">
-        <div class="flex flex-col justify-center">
-          <!-- <div class="grid grid-cols-1 gap-6 lg:grid-cols-2"> -->
           <div class="flex flex-col justify-center">
             <h1 class="text-4xl font-extrabold leading-10 text-gray-900">
               Collaborative drawing with Microbits
@@ -90,11 +74,90 @@
             <p class="mt-2 text-lg leading-7 text-gray-500">
                 The "Collaborative Drawing with Microbits" project at ITPD, SDU Denmark, harnesses the power of multiple Microbit devices to create a unique, interactive drawing experience. Each Microbit, detecting pitch and roll, wirelessly transmits data to a receiver connected to a Node.js server, allowing users to collaboratively draw on a digital canvas in real time.
             </p>
-            <h6 class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0">Prototype 1</h6>
+            <h6 class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0">Prototype 0</h6>
             <img class="w-full pb-2" src="./first_snapshot.jpg" />
           </div>
         <!-- </div> -->
       </div>
+      <div class="mx-auto max-w-7xl p-6 mb-22 lg:px-8">
+        <div class="flex flex-col justify-center">
+          <h1 class="text-4xl font-extrabold leading-10 text-gray-900">
+            microbit-web-monitor
+          </h1>
+          <h6 class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0">Description</h6>
+          <p class="mt-2 text-lg leading-7 text-gray-500">
+            The microbit-web-monitor project is a web-based monitoring system for micro:bit devices. It allows you to remotely monitor and control micro:bit devices using a web browser.
+          </p>
+          <h6 class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0">Features</h6>
+          <ul class="list-disc list-inside mt-2 text-lg leading-7 text-gray-500">
+            <li>Real-time monitoring of micro:bit sensors and inputs</li>
+            <li>Remote control of micro:bit outputs and actuators</li>
+            <li>Web-based interface for easy access and usage</li>
+          </ul>
+          <h6 class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0">Installation</h6>
+          <p class="mt-2 text-lg leading-7 text-gray-500">
+            On the microbit receiver:
+            <br />
+            <code>radio.onReceivedValue(function (name, value) { serial.writeLine("" + name + value) })</code>
+            <br />
+            <code>radio.setGroup(99)</code>
+            <br />
+            <code>serial.redirectToUSB()</code>
+            <br />
+            <br />
+            On the microbit Emitter 1:
+            <br />
+            <code>input.onButtonPressed(Button.A, function () { radio.sendValue("a", 0) })</code>
+            <br />
+            <code>radio.setGroup(99)</code>
+            <br />
+            <code>basic.forever(function () { radio.sendValue("p", input.rotation(Rotation.Pitch)) basic.pause(100) radio.sendValue("r", input.rotation(Rotation.Roll)) basic.pause(100) })</code>
+            <br />
+            <br />
+            On the microbit Emitter 2:
+            <br />
+            <code>input.onButtonPressed(Button.A, function () { radio.sendValue("a", 0) })</code>
+            <br />
+            <code>radio.setGroup(99)</code>
+            <br />
+            <code>basic.forever(function () { radio.sendValue("q", input.rotation(Rotation.Pitch)) basic.pause(100) radio.sendValue("s", input.rotation(Rotation.Roll)) basic.pause(100) })</code>
+            <br />
+            <br />
+            On the computer:
+            <br />
+            <code>Clone<a href="https://github.com/lexsalt/Microbit-drawing-collab" class="text-md font-semibold leading-6 text-gray-900"
+              > this <span aria-hidden="true"></span
+            ></a> repository to your local machine.</code>
+            <br />
+            <code>Install the required dependencies by running npm install.</code>
+            <br />
+            <code>Configure port following the instructions on index.js.</code>
+            <br />
+            <code>Start the server by running npm start.</code>
+          </p>
+          <h6 class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0">Usage</h6>
+          <p class="mt-2 text-lg leading-7 text-gray-500">
+            Open your web browser and navigate to the URL where the server is running.
+            <br />
+            Follow the on-screen instructions to connect and monitor your micro:bit devices.
+          </p>
+        </div>
+      </div>
+
+      <div class="mx-auto max-w-7xl p-6 mb-22 lg:px-8">
+          <div class="flex flex-col justify-center">
+            <h1 class="text-4xl font-extrabold leading-10 text-gray-900">
+              Collaborative drawing with Microbits
+            </h1>
+            <p class="mt-2 text-lg leading-7 text-gray-500">
+                The "Collaborative Drawing with Microbits" project at ITPD, SDU Denmark, harnesses the power of multiple Microbit devices to create a unique, interactive drawing experience. Each Microbit, detecting pitch and roll, wirelessly transmits data to a receiver connected to a Node.js server, allowing users to collaboratively draw on a digital canvas in real time.
+            </p>
+            <h6 class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0">Prototype 2</h6>
+            <img class="w-full pb-2" src="./second_snapshot.jpg" />
+          </div>
+        <!-- </div> -->
+
+     
     </main>
     <footer class="bg-white">
         <div class="mx-auto max-w-7xl p-6 lg:px-8">
