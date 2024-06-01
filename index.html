@@ -29,17 +29,19 @@
           </a>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+          <a href="#project" class="text-sm font-semibold leading-6 text-gray-900"
             >Project</a
           >
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+          <a href="#testing" class="text-sm font-semibold leading-6 text-gray-900"
+          >Tests</a
+          >
+          <a href="#about" class="text-sm font-semibold leading-6 text-gray-900"
+          >How it works</a
+          >
+          <a
+            href="#mapping"
+            class="text-sm font-semibold leading-6 text-gray-900"
             >Mapping</a
-          >
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-            >Tests</a
-          >
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-            >About</a
           >
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -53,6 +55,7 @@
     </header>
     <main class="bg-white">
       <div class="flex flex-col gap-60 pt-24 divide-y">
+        <section id="project">
         <div class="mx-auto max-w-7xl pt-8">
           <h1
             class="text-4xl font-extrabold leading-10 text-gray-900 pb-8 pb-8"
@@ -68,15 +71,27 @@
           <h6
             class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0"
           >
-            Prototype 1
+           Theme: Synchrony
           </h6>
-          <img class="w-full pb-2" src="./RobbnMarcus.png" />
+          <p class="mt-2 text-lg leading-7 text-gray-500">
+            The theme of Synchrony explores synchronized movement, interpersonal
+            motor coordination, mimesis, and limbic resonance. The project
+            focuses on creating interactive experiences that promote full-body
+            collaborative interactions, real-time tracking, and tangible
+            interactions.
+          <img class="w-full pb-2 pt-8" src="./RobbnMarcus.png" />
         </div>
+      </section>
         <!-- </div> -->
         <div class="mx-auto max-w-7xl pt-8">
           <h1 class="text-4xl font-extrabold leading-10 text-gray-900 pb-8">
             Collaborative drawing with Microbits
           </h1>
+          <h6
+          class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0"
+        >
+          Prototype 0
+        </h6>
           <p class="mt-2 text-lg leading-7 text-gray-500">
             The "Collaborative Drawing with Microbits" project at ITPD, SDU
             Denmark, harnesses the power of multiple Microbit devices to create
@@ -90,131 +105,139 @@
           >
             Prototype 0
           </h6>
-          <img class="w-full pb-2" src="./first_snapshot.jpg" />
+          <img class="w-full pb-2 pt-8" src="./first_snapshot.jpg" />
         </div>
         <!-- </div> -->
-        <div class="mx-auto max-w-7xl pt-8">
-          <h1 class="text-4xl font-extrabold leading-10 text-gray-900 pb-8">
-            Testing & Feedback
-          </h1>
-          <p class="mt-2 text-lg leading-7 text-gray-500">
-            Testing the product to identify and fix bugs, ensuring it meets the
-            required standards and functions as intended. Feedback from users
-            provided critical insights into usability and performance, helping
-            to refine and improve the product based on their experience.
-          </p>
-          <h6
-            class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0"
-          >
-            Prototype 1
-          </h6>
-          <img class="w-full pb-2" src="./test-1.png" />
-          <img class="w-full pb-2" src="./test-2.png" />
-          <img class="w-full pb-2" src="./test-3.png" />
-        </div>
+        <section id="testing">
+          <div class="mx-auto max-w-7xl pt-8">
+            <h1 class="text-4xl font-extrabold leading-10 text-gray-900 pb-8">
+              Testing & Feedback
+            </h1>
+            <p class="mt-2 text-lg leading-7 text-gray-500">
+              Testing the product to identify and fix bugs, ensuring it meets
+              the required standards and functions as intended. Feedback from
+              users provided critical insights into usability and performance,
+              helping to refine and improve the product based on their
+              experience.
+            </p>
+            <h6
+              class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0"
+            >
+              Prototype 1
+            </h6>
+            <img class="w-full pb-2 pt-4" src="./test-1.png" />
+            <img class="w-full pb-2 pt-4" src="./test-2.png" />
+            <img class="w-full pb-2 pt-4" src="./test-3.png" />
+          </div>
+        </section>
         <!-- </div> -->
-        <div class="mx-auto max-w-7xl pt-8">
-          <h1 class="text-4xl font-extrabold leading-10 text-gray-900 pb-8">
-            Microbit-web-monitor
-          </h1>
-          <h6
+        <section id="about">
+          <div class="mx-auto max-w-7xl pt-8">
+            <h1 class="text-4xl font-extrabold leading-10 text-gray-900 pb-8">
+              How It Works
+            </h1>
+            <img class="w-full pb-2 pt-8 pt-8" src="./github_repo.png" />
+            <h6
             class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0"
-          >
-            Description
+            >
+            Synchronized Collaborative Interaction:
           </h6>
           <p class="mt-2 text-lg leading-7 text-gray-500">
-            The microbit-web-monitor project is a web-based monitoring system
-            for micro:bit devices. It allows you to remotely monitor and control
-            micro:bit devices using a web browser.
+            Two children must work together to manipulate the giant pencil. One
+            child controls the button that activates drawing on the screen,
+            while both children need to coordinate their movements to achieve
+            the desired drawing. Real-time Tracking:
+            <br />
+            The pencil is equipped with a micro-bit board with sensors that
+            track its pitch and roll positions. This data is sent to another
+            micro-bit acting as a receiver, which then transmits the information
+            to a Node.js server via a serial port. Data Transmission and
+            Visualization:
+            <br />
+            The Node.js server processes the signals and redirects them via
+            socket to a web browser where a canvas visualizes the movements. The
+            pitch and roll of the pencil are converted into y-axis and x-axis
+            positions on the canvas, respectively.
           </p>
           <h6
-            class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0"
+          class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0"
           >
-            Features
+            Educational Objectives
           </h6>
+          <p>
+            Our prototype aims to teach children about the importance of
+            synchronized movement and interpersonal motor coordination through
+            play. Here are some key educational benefits:
+          </p>
           <ul
-            class="list-disc list-inside mt-2 text-lg leading-7 text-gray-500"
+          class="list-disc list-inside mt-2 text-lg leading-7 text-gray-500"
           >
-            <li>Real-time monitoring of micro:bit sensors and inputs</li>
-            <li>Remote control of micro:bit outputs and actuators</li>
-            <li>Web-based interface for easy access and usage</li>
+          <li>
+            Understanding Synchrony: The children learn how their coordinated
+            efforts impact the drawing on the screen. They must communicate
+            and adjust their movements in real-time, fostering an
+            understanding of how synchronization and teamwork are crucial in
+            achieving a common goal.
+          </li>
+          <li>
+              Proprioception and Balance: As they manipulate the pencil,
+              children gain a better sense of their own body movements and
+              spatial awareness. This hands-on experience enhances their
+              proprioception and balance.
+            </li>
+            <li>
+              Interactive Learning: The immediate visual feedback on the canvas
+              ensures that children can quickly see the results of their
+              actions. This instant response encourages them to experiment and
+              adjust their movements, making the learning process dynamic and
+              engaging.
+            </li>
           </ul>
           <h6
-            class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0"
+          class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0"
           >
-            Installation
+          Installation
+        </h6>
+        <p class="mt-2 text-lg leading-7 text-gray-500">
+          <br />
+          On the computer:
+          <br />
+          <code
+          >Clone<a
+          href="https://github.com/lexsalt/Microbit-drawing-collab"
+          class="text-md font-semibold leading-6 text-gray-900"
+          >
+          this <span aria-hidden="true"></span
+            ></a>
+              repository to your local machine.</code
+              >
+              <br />
+              <code
+              >Install the required dependencies by running npm install.</code
+              >
+              <br />
+              <code>Configure port following the instructions on index.js.</code>
+              <br />
+              <code>Start the server by running npm start.</code>
+            </p>
+            <h6
+            class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0"
+            >
+            Microbit Setup
           </h6>
           <p class="mt-2 text-lg leading-7 text-gray-500">
-            On the microbit receiver:
+            We need 2 microbits:
             <br />
-            <code
-              >radio.onReceivedValue(function (name, value) {
-              serial.writeLine("" + name + value) })</code
-            >
-            <br />
-            <code>radio.setGroup(99)</code>
-            <br />
-            <code>serial.redirectToUSB()</code>
-            <br />
-            <br />
-            On the microbit Emitter 1:
-            <br />
-            <code
-              >input.onButtonPressed(Button.A, function () {
-              radio.sendValue("a", 0) })</code
-            >
-            <br />
-            <code>radio.setGroup(99)</code>
-            <br />
-            <code
-              >basic.forever(function () { radio.sendValue("p",
-              input.rotation(Rotation.Pitch)) basic.pause(100)
-              radio.sendValue("r", input.rotation(Rotation.Roll))
-              basic.pause(100) })</code
-            >
-            <br />
-            <br />
-            On the microbit Emitter 2:
-            <br />
-            <code
-              >input.onButtonPressed(Button.A, function () {
-              radio.sendValue("a", 0) })</code
-            >
-            <br />
-            <code>radio.setGroup(99)</code>
-            <br />
-            <code
-              >basic.forever(function () { radio.sendValue("q",
-              input.rotation(Rotation.Pitch)) basic.pause(100)
-              radio.sendValue("s", input.rotation(Rotation.Roll))
-              basic.pause(100) })</code
-            >
-            <br />
-            <br />
-            On the computer:
-            <br />
-            <code
-              >Clone<a
-                href="https://github.com/lexsalt/Microbit-drawing-collab"
-                class="text-md font-semibold leading-6 text-gray-900"
-              >
-                this <span aria-hidden="true"></span
-              ></a>
-              repository to your local machine.</code
-            >
-            <br />
-            <code
-              >Install the required dependencies by running npm install.</code
-            >
-            <br />
-            <code>Configure port following the instructions on index.js.</code>
-            <br />
-            <code>Start the server by running npm start.</code>
+            <ul>
+              <li>Transmitter that sends the pitch and roll signals</li>
+              <li>Receiver that redirects the signal via Usb to the computer</li>
+            </ul>
+            Install the code describe on the "Readme.md" file and follow the instructions to connect and monitor your micro:bit devices.
           </p>
           <h6
-            class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0"
+          class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0"
           >
-            Usage
+          Usage
           </h6>
           <p class="mt-2 text-lg leading-7 text-gray-500">
             Open your web browser and navigate to the URL where the server is
@@ -224,6 +247,28 @@
             micro:bit devices.
           </p>
         </div>
+      </section>
+        <!-- </div> -->
+        <section id="mapping">
+          <div class="mx-auto max-w-7xl pt-8">
+            <h1 class="text-4xl font-extrabold leading-10 text-gray-900 pb-8">
+              Design Space mapping.
+            </h1>
+            <p class="mt-2 text-lg leading-7 text-gray-500">
+              Presentation of Iterative map develpment
+            </p>
+            <h6
+              class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-6"
+            >
+              Submitted Deliverable 1:
+            </h6>
+            <img
+              class="w-full pb-2"
+              src="./Mapping.png"
+              style="border: 1px black solid; border-radius: 10px"
+            />
+          </div>
+        </section>
         <!-- </div> -->
         <div class="mx-auto max-w-7xl pt-8">
           <h1 class="text-4xl font-extrabold leading-10 text-gray-900 pb-8">
@@ -246,7 +291,7 @@
           >
             Prototype 2
           </h6>
-          <img class="w-full pb-2" src="./prototype2.0.png" />
+          <img class="w-full pb-2 pt-8" src="./prototype2.0.png" />
         </div>
         <!-- </div> -->
         <div class="mx-auto max-w-7xl pt-8">
@@ -337,6 +382,9 @@
             src="./prototype2.0.png"
             style="border: 1px black solid; border-radius: 10px"
           />
+          <img class="w-full pb-2 pt-4" src="./kids0.jpg" />
+          <img class="w-full pb-2 pt-4" src="./kids1.jpg" />
+          <img class="w-full pb-2 pt-4" src="./kids2.png" />
         </div>
         <!-- </div> -->
         <div class="mx-auto max-w-7xl pt-8">
