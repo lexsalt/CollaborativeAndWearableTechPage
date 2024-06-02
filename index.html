@@ -19,35 +19,54 @@
   <body class="bg-slate-200">
     <header class="bg-white mb-22">
       <nav
-        class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-4 border-solid border-slate-100"
         aria-label="Global"
       >
         <div class="flex lg:flex-1">
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Sdu</span>
-            <img class="h-8 w-auto" src="./sdu_logo.png" alt="" />
+            <img class="h-8 w-auto rounded-lg m-2" src="./sdu_logo.png" alt="" />
           </a>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-          <a href="#project" class="text-sm font-semibold leading-6 text-gray-900"
+          <a href="#project" class="flex justify-center font-semibold leading-6 text-gray-900 rounded-lg py-2 w-28 border-1 border-solid border-slate-100"
             >Project</a
           >
-          <a href="#testing" class="text-sm font-semibold leading-6 text-gray-900"
+          <a href="#testing" class="flex justify-center font-semibold leading-6 text-gray-900 rounded-lg py-2 w-28 border-1 border-solid border-slate-100"
           >Tests</a
           >
-          <a href="#about" class="text-sm font-semibold leading-6 text-gray-900"
+          <a href="#about" class="flex justify-center font-semibold leading-6 text-gray-900 rounded-lg py-2 w-28 border-1 border-solid border-slate-100"
           >How it works</a
           >
           <a
             href="#mapping"
-            class="text-sm font-semibold leading-6 text-gray-900"
+            class="flex justify-center font-semibold leading-6 text-gray-900 rounded-lg py-2 w-28 border-1 border-solid border-slate-100"
             >Mapping</a
-          >
+            >
+            <!-- Dropdown Menu -->
+          <div class="relative">
+            <button class="dropdown-toggle hidden lg:flex lg:gap-x-2 align-center justify-center rounded-lg py-2 text-sm font-semibold leading-6 text-gray-900 w-36 border-1 border-solid border-slate-100">
+              <!-- <span class="pointer-events-none">Services</span> -->
+              Services
+              <svg class="w-4 h-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <title>chevron-down</title>
+                <g fill="none">
+                  <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+              </svg>
+            </button>
+            <div class="dropdown-menu absolute hidden bg-gray-100 rounded-b-lg pb-2">
+              <a href="#prototype0" class="text-sm font-semibold leading-6 text-gray-900 block px-6 py-2 hover:bg-gray-200 border-2 border-solid rounded-lg border-slate-100">Prototype 0</a>
+              <a href="#testing" class="text-sm font-semibold leading-6 text-gray-900 block px-6 py-2 hover:bg-gray-200 border-1 border-solid rounded-lg border-slate-100">Prototype 1.0</a>
+              <a href="#prototype2" class="text-sm font-semibold leading-6 text-gray-900 block px-6 py-2 hover:bg-gray-200 border-1 border-solid rounded-lg border-slate-100">Prototype 2.0</a>
+              <a href="#prototype3" class="text-sm font-semibold leading-6 text-gray-900 block px-6 py-2 hover:bg-gray-200 border-1 border-solid rounded-lg border-slate-100">Prototype 3.0</a>
+            </div>
+          </div>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
             href="https://github.com/lexsalt/Microbit-drawing-collab"
-            class="text-sm font-semibold leading-6 text-gray-900"
+            class="flex justify-center font-semibold leading-6 text-gray-900 rounded-lg py-2 w-28 border-1 border-solid border-slate-100"
             >Github <span aria-hidden="true"></span
           ></a>
         </div>
@@ -83,15 +102,16 @@
         </div>
       </section>
         <!-- </div> -->
-        <div class="mx-auto max-w-7xl pt-8">
-          <h1 class="text-4xl font-extrabold leading-10 text-gray-900 pb-8">
-            Collaborative drawing with Microbits
-          </h1>
-          <h6
-          class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0"
-        >
-          Prototype 0
-        </h6>
+        <section id="prototype0">
+          <div class="mx-auto max-w-7xl pt-8">
+            <h1 class="text-4xl font-extrabold leading-10 text-gray-900 pb-8">
+              Collaborative drawing with Microbits
+            </h1>
+            <h6
+            class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0"
+            >
+            Prototype 0
+          </h6>
           <p class="mt-2 text-lg leading-7 text-gray-500">
             The "Collaborative Drawing with Microbits" project at ITPD, SDU
             Denmark, harnesses the power of multiple Microbit devices to create
@@ -101,14 +121,15 @@
             digital canvas in real time.
           </p>
           <h6
-            class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0"
+          class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0"
           >
-            Prototype 0
-          </h6>
-          <img class="w-full pb-2 pt-8" src="./first_snapshot.jpg" />
-        </div>
-        <!-- </div> -->
-        <section id="testing">
+          Prototype 0
+        </h6>
+        <img class="w-full pb-2 pt-8" src="./first_snapshot.jpg" />
+      </div>
+    </section>
+      <!-- </div> -->
+      <section id="testing">
           <div class="mx-auto max-w-7xl pt-8">
             <h1 class="text-4xl font-extrabold leading-10 text-gray-900 pb-8">
               Testing & Feedback
@@ -270,38 +291,41 @@
           </div>
         </section>
         <!-- </div> -->
-        <div class="mx-auto max-w-7xl pt-8">
-          <h1 class="text-4xl font-extrabold leading-10 text-gray-900 pb-8">
-            Design & Development update
-          </h1>
-          <p class="mt-2 text-lg leading-7 text-gray-500">
-            Incorporating the positive feedback from the professor, we enhanced
-            the project by focusing on the embodied collaborative experience of
-            nine-year-old users. We introduced a giant pencil with two buttons,
-            one at each end, connected to a micro . This setup encourages
-            children to work together, using the buttons to interact with the
-            device. By integrating this tactile, cooperative element, we aim to
-            foster teamwork and active participation, making the learning
-            process more engaging and interactive. The pencil serves as a
-            familiar and fun tool, transforming the educational experience into
-            a collaborative adventure.
-          </p>
-          <h6
+        <section id="prototype2">
+          <div class="mx-auto max-w-7xl pt-8">
+            <h1 class="text-4xl font-extrabold leading-10 text-gray-900 pb-8">
+              Design & Development update
+            </h1>
+            <p class="mt-2 text-lg leading-7 text-gray-500">
+              Incorporating the positive feedback from the professor, we enhanced
+              the project by focusing on the embodied collaborative experience of
+              nine-year-old users. We introduced a giant pencil with two buttons,
+              one at each end, connected to a micro . This setup encourages
+              children to work together, using the buttons to interact with the
+              device. By integrating this tactile, cooperative element, we aim to
+              foster teamwork and active participation, making the learning
+              process more engaging and interactive. The pencil serves as a
+              familiar and fun tool, transforming the educational experience into
+              a collaborative adventure.
+            </p>
+            <h6
             class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-0"
-          >
+            >
             Prototype 2
           </h6>
           <img class="w-full pb-2 pt-8" src="./pencil2.jpg" />
           <img class="w-full pb-2 pt-8" src="./prototype2.0.png" />
         </div>
+      </section>
         <!-- </div> -->
-        <div class="mx-auto max-w-7xl pt-8">
-          <h1 class="text-4xl font-extrabold leading-10 text-gray-900 pb-8">
-            Design Log (mayor update)
-          </h1>
-          <h6
+        <section id="prototype3">
+          <div class="mx-auto max-w-7xl pt-8">
+            <h1 class="text-4xl font-extrabold leading-10 text-gray-900 pb-8">
+              Design Log (mayor update)
+            </h1>
+            <h6
             class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-6"
-          >
+            >
             Synchrony
           </h6>
           <p class="mt-2 text-lg leading-7 text-gray-500">
@@ -374,21 +398,22 @@
             experience for young students.
           </p>
           <h6
-            class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-6"
+          class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-6"
           >
-            Prototype 3.0
-          </h6>
-          <img
-            class="w-full pb-2"
-            src="./prototype2.0.png"
-            style="border: 1px black solid; border-radius: 10px"
-          />
-          <img class="w-full pb-2 pt-4" src="./kids0.jpg" />
-          <img class="w-full pb-2 pt-4" src="./kids1.jpg" />
-          <img class="w-full pb-2 pt-4" src="./kids2.png" />
-        </div>
-        <!-- </div> -->
-        <div class="mx-auto max-w-7xl pt-8">
+          Prototype 3.0
+        </h6>
+        <img
+        class="w-full pb-2"
+        src="./prototype2.0.png"
+        style="border: 1px black solid; border-radius: 10px"
+        />
+        <img class="w-full pb-2 pt-4" src="./kids0.jpg" />
+        <img class="w-full pb-2 pt-4" src="./kids1.jpg" />
+        <img class="w-full pb-2 pt-4" src="./kids2.png" />
+      </div>
+    </section>
+      <!-- </div> -->
+      <div class="mx-auto max-w-7xl pt-8">
           <h1 class="text-4xl font-extrabold leading-10 text-gray-900 pb-8">
             Schedule
           </h1>
