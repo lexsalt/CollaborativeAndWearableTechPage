@@ -5,3 +5,12 @@ body {
   padding: 0;
 }
 /* CSS Code */
+code {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  display: inline-block;
+  font-family: monospace;
+  margin: 0 2px;
+  padding: 0 5px;
+}

@@ -47,7 +47,7 @@
           <div class="relative">
             <button class="dropdown-toggle hidden lg:flex lg:gap-x-2 align-center justify-center rounded-lg py-2 text-m font-semibold leading-6 text-gray-900 w-36 border-1 border-solid border-slate-100  hover:bg-gray-200">
               <!-- <span class="pointer-events-none">Services</span> -->
-              Services
+              Prototypes
               <svg class="w-4 h-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <title>chevron-down</title>
                 <g fill="none">
@@ -60,6 +60,7 @@
               <a href="#testing" class="text-sm font-semibold leading-6 text-gray-900 block px-6 py-2 hover:bg-gray-200 border-1 border-solid rounded-lg border-slate-100">Prototype 1.0</a>
               <a href="#prototype2" class="text-sm font-semibold leading-6 text-gray-900 block px-6 py-2 hover:bg-gray-200 border-1 border-solid rounded-lg border-slate-100">Prototype 2.0</a>
               <a href="#prototype3" class="text-sm font-semibold leading-6 text-gray-900 block px-6 py-2 hover:bg-gray-200 border-1 border-solid rounded-lg border-slate-100">Prototype 3.0</a>
+              <a href="#prototype4" class="text-sm font-semibold leading-6 text-gray-900 block px-6 py-2 hover:bg-gray-200 border-1 border-solid rounded-lg border-slate-100">Prototype 4.0</a>
             </div>
           </div>
         </div>
@@ -281,6 +282,27 @@
             <h6
               class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-6"
             >
+              After consultation with the professor we upgraded to mapping to contemplate all the Prototypes:
+            </h6>
+            <img
+              class="w-full"
+              src="./mapping-2.png"
+              style="border: 1px black solid; border-radius: 10px"
+            />
+          </div>
+        </section>
+        <!-- </div> -->
+        <section id="mapping">
+          <div class="mx-auto max-w-7xl pt-8">
+            <h1 class="text-4xl font-extrabold leading-10 text-gray-900 pb-8">
+              Design Space mapping Iteration.
+            </h1>
+            <p class="mt-2 text-lg leading-7 text-gray-500">
+              Presentation of Iterative map develpment
+            </p>
+            <h6
+              class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-6"
+            >
               Submitted Deliverable 1:
             </h6>
             <img
@@ -321,12 +343,12 @@
         <section id="prototype3">
           <div class="mx-auto max-w-7xl pt-8">
             <h1 class="text-4xl font-extrabold leading-10 text-gray-900 pb-8">
-              Design Log (mayor update)
+              Synchrony
             </h1>
             <h6
             class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-6"
             >
-            Synchrony
+            Synchrony Theme
           </h6>
           <p class="mt-2 text-lg leading-7 text-gray-500">
             After careful consideration, we chose the theme of Synchrony,
@@ -412,6 +434,140 @@
         <img class="w-full pb-2 pt-4" src="./kids2.png" />
       </div>
     </section>
+      <!-- </div> -->
+      <section id="prototype4">
+        <div class="mx-auto max-w-7xl pt-8">
+          <h1 class="text-4xl font-extrabold leading-10 text-gray-900 pb-8">
+            Design Log Final Iteration
+          </h1>
+          <h6
+          class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-6"
+          >
+          Prototype 4.0 Synchrony theme
+        </h6>
+        <p class="mt-2 text-lg leading-7 text-gray-500">
+          <h6><b>IMPORTANT</b></b></h6><br />
+          <p>
+            If you have the makecode.microbit.org/#editor page open it makes noise to the connection and you have bad line readings. Close all your editors before runnig the node js server.
+          </p>
+          <br />
+          <br />
+          <h6><b>Installation</b></b></h6><br />
+          <b>Only one Micro-bit set up for testing:</b><br />
+<div style="background-color: black; color: white; padding: 5px; margin: 0.1rem;">
+  <code >
+    serial.redirectToUSB()
+    <br />
+    serial.setBaudRate(BaudRate.BaudRate115200)
+    <br />
+    basic.forever(function () {
+      <br />
+      serial.writeLine("p" + input.rotation(Rotation.Pitch))
+      <br />
+      basic.pause(100)
+      <br />
+      serial.writeLine("r" + input.rotation(Rotation.Roll))
+      <br />
+      basic.pause(100) 
+      <br />
+      if (pins.digitalReadPin(DigitalPin.P0) == 1) {
+        <br />
+         serial.writeLine("a" + "0") 
+         <br />
+        } 
+      }
+      )
+  </code>
+</div>
+          <br />
+          <br />
+          <b>On the microbit receiver:</b><br />
+          <div style="background-color: black; color: white; padding: 5px; margin: 0.1rem;">
+            <code >
+              radio.onReceivedValue(function (name, value) {
+                <br />
+                 serial.writeLine("" + name + value) 
+                 <br />
+                }) 
+                <br />
+              radio.setGroup(99) serial.redirectToUSB()
+              <br />
+            </code>
+          </div>
+          
+
+
+          <br />
+          <br />
+          <b>On the microbit Emitter 1:</b><br />
+          <div style="background-color: black; color: white; padding: 5px; margin: 0.1rem;">
+            <code >
+              
+          input.onButtonPressed(Button.A, function () {
+            <br />
+            radio.sendValue("a", 0) 
+            <br />
+          })
+          <br />
+          radio.setGroup(99)
+          <br />
+          serial.redirectToUSB()
+          <br />
+          pins.setPull(DigitalPin.P0, PinPullMode.PullDown)
+          <br />
+          
+          basic.forever(function () {
+            <br />
+            radio.sendValue("p", input.rotation(Rotation.Pitch))
+            <br />
+            basic.pause(100)
+            <br />
+            radio.sendValue("r", input.rotation(Rotation.Roll))
+            <br />
+            basic.pause(100)
+            <br />
+            if (pins.digitalReadPin(DigitalPin.P0) == 1) {
+               <br />
+               radio.sendValue("a", 0)
+               <br />
+              }
+              <br />
+              basic.pause(100) 
+              <br />
+            })
+              <br />
+            </code>
+          </div>
+          <br />
+          <br />
+          <br />
+          <div class="max-w-7xl mb-12">
+          <h6
+          class="text-3xl font-extrabold leading-10 text-gray-900 pt-8 pb-6"
+          >
+          Changes on input Metaphore
+        </h6>
+          <p>
+            After consultation with the professor we agreed that the giant pencil characteristics of product metaphore is not adecuate for an input to this project.  A pencil is typically associated with drawing or writing directly on a surface in close proximity. This physical interaction does not align well with the idea of remotely controlling a screen. 
+            <br>
+            A more contextually relevant metaphor will better represent the remote interaction with the screen, making the user experience more intuitive, therefore I have decided to try different metaphores to see which one is the best fit for the project:
+          </p>
+          <br>
+          <ul>
+            <li>1- Giant Wheel: (similar to etch a sketch but all in one wheel)</li>
+            <li>2- Laser Pointer.</li>
+            <li>3- Bazooka style pointer.</li>
+            <li>4- Virtual Stylus.</li>
+            <li>5- Magic Wand.</li>
+          </ul>
+        </div>
+      <img
+      class="w-full pb-2"
+      src="./DrawPrototypeFinal.png"
+      style="border: 1px black solid; border-radius: 10px"
+      />
+    </div>
+  </section>
       <!-- </div> -->
       <div class="mx-auto max-w-7xl pt-8">
           <h1 class="text-4xl font-extrabold leading-10 text-gray-900 pb-8">
